@@ -9,13 +9,33 @@ $split = new Movie("Split", "EN", 5, 278.5, 116);
 // $split->setRating('5');
 $theTrumanShow = new Movie("The Truman Show", "EN", 4, 264.1, 103);
 // $theTrumanShow->setRating(5);
-$watchOutWereMad =new Movie("Watch Out, We're Mad!", "EN", 4, 0.085, 90);
+$watchOutWereMad = new Movie("Watch Out, We're Mad!", "EN", 4, 0.085, 90);
+$grownUps = new Movie("Grown Ups", "EN", 3, 271.4, 102);
+$grownUps2 = new Movie("Grown Ups 2", "EN", 3, 246.9, 100);
 
-$movies = [
+
+$peakyBlinders = new Serie("Peaky Blinders", "EN", 5, 6);
+$theWitcher = new Serie("The Witcher", "EN", 4, 3);
+$theOffice = new Serie("The Office", "EN", 4, 9);
+$moneyHeist = new Serie("Money Heist", "SP", 4, 3);
+$blackMirror = new Serie("Black Mirror", "EN", 4, 6);
+
+$productions = [
     $split,
     $theTrumanShow,
     $watchOutWereMad,
+
+    $peakyBlinders,
+    $theWitcher,
+    $theOffice,
+    $moneyHeist,
+    $blackMirror
+
+
 ];
+
+
+
 
 var_dump($split);
 
