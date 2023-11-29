@@ -1,15 +1,15 @@
 <?php
 class Production {
-    public $title;
-    public $language;
-    private $rating;
+    protected $title;
+    protected $language;
+    protected $rating;
 
-    function __construct(String $_title, String $_language) {
+    function __construct(String $_title, String $_language, int $_rating) {
         $this->title = $_title;
         $this->language = $_language;
-        $this->rating = 0; 
+        // $this->rating = 0; 
         //$this->rating = $rating; // O cosi
-        //$this->setRating($rating); // O cosi
+        $this->setRating($_rating); // O cosi
     }
 
     public function setRating($_rating) {
@@ -19,6 +19,16 @@ class Production {
         $this->rating = null;
         echo('$_rating setting is not correct');
     }}
+
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    public function getLang()
+    {
+        return $this->language;
+    }
 
     public function getRating()
     {

@@ -1,37 +1,36 @@
 <?php 
 require_once __DIR__ . '/Models/Production.php';
-// classe
+require_once __DIR__ . '/Models/Movie.php';
+require_once __DIR__ . '/Models/Serie.php';
 
+$split = new Movie("Split", "EN", 5, 278.5, 116);
+// $split->title = "Split";
+// $split->language = "EN";
+// $split->setRating('5');
+$theTrumanShow = new Movie("The Truman Show", "EN", 4, 264.1, 103);
+// $theTrumanShow->setRating(5);
+$watchOutWereMad =new Movie("Watch Out, We're Mad!", "EN", 4, 0.085, 90);
 
-$split = new Production("Split", "EN");
-$split->title = "Split";
-$split->language = "EN";
-$split->setRating('5');
+$movies = [
+    $split,
+    $theTrumanShow,
+    $watchOutWereMad,
+];
 
 var_dump($split);
 
-
-$theTrumanShow = new Production("The Truman Show", "EN");
-$theTrumanShow->setRating(5);
-var_dump($theTrumanShow);
-
-$movies = [
-    new Production("Split", "EN"),
-    new Production("The Truman Show", "EN"),
-    new Production("Watch Out, We're Mad!", "EN")
-];
-
-$watchOutWereMad = $movies[2];
-$watchOutWereMad->setRating(7);
-
-$split = $movies[0];
-$split->setRating(5);
-
-$theTrumanShow = $movies[1];
-$theTrumanShow->setRating(6);
+var_dump($movies);
 
 
 
+// $watchOutWereMad = $movies[2];
+// $watchOutWereMad->setRating(7);
+
+// $split = $movies[0];
+// $split->setRating(5);
+
+// $theTrumanShow = $movies[1];
+// $theTrumanShow->setRating(6);
 
 ?>
 
@@ -54,13 +53,12 @@ $theTrumanShow->setRating(6);
             <ul>
                 <?php foreach($movies as $movie) { ?>
                     <li>
-                        <?php echo($movie->title . ' - ' . $movie->language . ' - ' . $movie->getRating() ) ?>
+                        <?php echo $movie->getProfit() ?>
                     </li>
                 <?php } ?>
                 
             </ul>
         </section>
     </main>
-    
 </body>
 </html>
