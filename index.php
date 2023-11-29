@@ -24,14 +24,14 @@ $productions = [
     $split,
     $theTrumanShow,
     $watchOutWereMad,
+    $grownUps,
+    $grownUps2,
 
     $peakyBlinders,
     $theWitcher,
     $theOffice,
     $moneyHeist,
-    $blackMirror
-
-
+    $blackMirror,
 ];
 
 
