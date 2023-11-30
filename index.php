@@ -32,14 +32,14 @@ $productions = [
     $theOffice,
     $moneyHeist,
     $blackMirror,
-];
+]
 
 
 
 
-var_dump($split);
+// var_dump($split);
 
-var_dump($movies);
+// var_dump($movies);
 
 
 
@@ -71,9 +71,9 @@ var_dump($movies);
     <main>
         <section class="container">
             <ul>
-                <?php foreach($movies as $movie) { ?>
+                <?php foreach($productions as $production) { ?>
                     <li>
-                        <?php echo $movie->getProfit() ?>
+                    <?php echo('Film: ' . $production->getTitle() . ' - Lingua originale: ' . $production->getLang() . ' - Valutazione: ' . $production->getRating() . '.') ?>
                     </li>
                 <?php } ?>
                 
